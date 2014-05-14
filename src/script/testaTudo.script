@@ -1,0 +1,112 @@
+newGraph    map1
+newGraph    map2
+
+newCity     Rio_de_Janeiro  5940000     1182    0   0
+newCity     Sao_Paulo       10660000    1522    10  10
+newCity     Belo_Horizonte  2258000     330     20  20
+newCity     Porto_Alegre    1365000     496     30  30
+newCity     Brasilia        2469000     5801    40  40
+newCity     Springfield     123425      234     15  15
+newCity     Quahog          14298       193     30  30
+newCity     Langley_Falls   123149      2981    45  45
+newCity     Gotham          12389230    7839    60  60
+newCity     Metropolis      5983739     3948    75  75
+newCity     Smallville      123400      2807    90  90
+newCity     Bedrock         1230        130     105 105
+
+newHwy      H0      6
+newHwy      H1      15
+newHwy      H2      8
+newHwy      H3      40
+newHwy      H4      5
+newHwy      H5      35
+newHwy      H6      15
+newHwy      R0      -7
+newHwy      R1      3
+newHwy      R2      2
+newHwy      R3      5
+newHwy      R4      -3
+
+
+addVertice  map1    Rio_de_Janeiro
+addVertice  map1    Sao_Paulo
+addVertice  map1    Brasilia
+addVertice  map1    Belo_Horizonte
+addVertice  map1    Porto_Alegre
+addEdge     map1    H0                  Brasilia        Belo_Horizonte
+addEdge     map1    H1                  Belo_Horizonte  Rio_de_Janeiro
+addEdge     map1    H2                  Sao_Paulo       Belo_Horizonte
+addEdge     map1    H3                  Rio_de_Janeiro  Porto_Alegre
+addEdge     map1    H4                  Sao_Paulo       Rio_de_Janeiro
+addEdge     map1    H5                  Sao_Paulo       Porto_Alegre
+addEdge     map1    H6                  Rio_de_Janeiro  Sao_Paulo
+
+addVertice  map2    Springfield
+addVertice  map2    Quahog
+addVertice  map2    Langley_Falls
+addVertice  map2    Gotham
+addVertice  map2    Metropolis
+addVertice  map2    Smallville
+addVertice  map2    Bedrock
+addEdge     map2    R0                  Quahog          Gotham
+addEdge     map2    R1                  Smallville      Quahog
+addEdge     map2    R2                  Gotham          Smallville
+addEdge     map2    R3                  Langley_Falls   Metropolis
+addEdge     map2    R4                  Springfield     Langley_Falls
+
+
+numVertices         map1
+dumpVertices        map1
+numEdges            map1
+dumpEdges           map1
+
+numVertices         map2
+dumpVertices        map2
+numEdges            map2
+dumpEdges           map2
+
+
+shortestPath    map1        Brasilia        Porto_Alegre
+shortestPath    map2        Springfield     Metropolis
+
+
+checkName       map1    Brasilia
+hasVertice      map1    Brasilia
+newCity         Brasilia        10      100     40  40
+
+
+dumpOutEdges    map1    Sao_Paulo
+dumpInEdges     map1    Belo_Horizonte
+
+
+dumpOutVertices map1    Sao_Paulo
+dumpInVertices  map1    Belo_Horizonte
+
+
+removeVertice   map1    Rio_de_Janeiro
+shortestPath    map1    Brasilia        Porto_Alegre
+dumpEdges       map1
+destroyEdges    map1
+numEdges        map1
+destroyMap      map1
+
+
+hasEdge         map2    R0
+dumpInVertice   map2    R0
+dumpOutVertice  map2    R0
+removeEdge      map2    R0
+dumpEdges       map2
+dumpVertices    map2
+
+
+
+save            map2    ./map.grf
+destroyMap      map2
+load            map2    ./map.grf
+dumpVertices    map2
+
+
+destroyMap      map2
+
+
+exit

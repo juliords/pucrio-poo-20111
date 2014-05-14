@@ -1,0 +1,29 @@
+newGraph map
+
+newCity vert1 1 1 35 35
+newCity vert2 2 2 70 35
+newCity vert3 3 3 35 70
+newCity vert4 4 4 70 70
+
+addVertice map vert1
+addVertice map vert2
+addVertice map vert3
+addVertice map vert4
+
+newHwy aresta1 -2
+newHwy aresta2 1
+newHwy aresta3 3
+newHwy aresta4 2
+
+addEdge map aresta1 vert1 vert2
+addEdge map aresta3 vert2 vert3
+addEdge map aresta4 vert3 vert4
+addEdge map aresta2 vert3 vert4
+
+shortestPath map vert1 vert4
+
+save    map    ./map2.grf
+
+exit
+
+

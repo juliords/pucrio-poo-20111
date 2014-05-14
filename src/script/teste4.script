@@ -1,0 +1,25 @@
+newGraph map
+
+newCity vert1 1 1
+newCity vert2 2 2
+newCity vert3 3 3
+newCity vert4 4 4
+
+addVertice map vert1
+addVertice map vert2
+addVertice map vert3
+addVertice map vert4
+
+newHwy aresta1 4
+newHwy aresta2 1
+newHwy aresta3 3
+newHwy aresta4 2
+
+addEdge map aresta1 vert1 vert3
+addEdge map aresta2 vert3 vert4
+addEdge map aresta3 vert1 vert2
+addEdge map aresta4 vert2 vert4
+
+shortestPath map vert1 vert4
+
+exit

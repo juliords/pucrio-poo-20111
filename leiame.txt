@@ -1,0 +1,14 @@
+
+Manual explicando sobre como executar o projeto contido neste diretório.
+
+
+Arquivos anexos:
+
+> compile.sh 	- Realiza a compilação de todos os fontes java
+> run.sh     	- Faz a chamada que executa o projeto
+> clean.sh   	- Remove os arquivos compilados de todas as pastas
+> classpaph  	- Define quais os diretorios que deverão ser vistos pelo javac na hora da compilação
+> script/*   	- Arquivos de script de teste
+> Demais...  	- Arquivos fontes
+
+Ao rodar o programa, o usuário é apresentado a uma interface no formato de janelas. Na janela principal são carregadas janelas internas para visualização de grafos. Os grafos são carregados a partir de arquivos previamente gerados pelo sistema implementado no trabalho 1, dado que ainda não implementamos a edição do grafo. Esses arquivos de teste estão dentro da pasta /srv/examples.

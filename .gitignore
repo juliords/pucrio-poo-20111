@@ -1,0 +1,6 @@
+*.o
+*.hex
+.depend.mk
+*.swp
+*~
+*.class

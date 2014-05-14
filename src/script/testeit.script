@@ -1,0 +1,27 @@
+newGraph map
+
+newCity vert1 1 1
+newCity vert2 2 2
+newCity vert3 3 3
+newCity vert4 4 4
+
+addVertice map vert1
+addVertice map vert2
+addVertice map vert3
+
+vIterator map
+
+vIteratorNext
+vIteratorNext
+vIteratorHasNext
+vIteratorNext
+vIteratorHasNext
+vIteratorNext
+vIteratorReset
+vIteratorNext
+
+addVertice map vert4
+
+vIteratorNext
+
+exit
